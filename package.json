@@ -1,0 +1,54 @@
+{
+  "name": "s5",
+  "description": "Simple S3 Sync",
+  "version": "0.0.1",
+  "author": {
+    "name": "Niels Dommerholt",
+    "url": "https://github.com/nielsutrecht/"
+  },
+  "homepage": "https://github.com/nielsutrecht/s5",
+  "contributors": [
+    {
+      "name": "Niels Dommerholt",
+      "email": "ndommerholt@gmail.com"
+    }
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+    "aws-sdk": "2.0.0-rc9"
+  },
+  "main": "lib/s5.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nielsutrecht/s5.git"
+  },
+  "bugs": {
+    "url": "http://github.com/nielsutrecht/s5/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT License",
+      "url": "https://github.com/nielsutrecht/s5/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "s3",
+    "sync"
+  ],
+  "scripts": {
+    "test": "npm -s run-script lint && npm -s run-script unit && ([ -f configuration ] && npm -s run-script integration || true)",
+    "unit": "jasmine-node --noColor --coffee test",
+    "integration": "cucumber.js",
+    "lint": "jshint lib",
+    "console": "./scripts/console"
+  },
+  "readme": "Simple S3 Sync: Sync application to back-up and restore files to and from Amazon S3",
+  "readmeFilename": "README.md"
+}

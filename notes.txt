@@ -1,0 +1,15 @@
+- initial
+  - create SimpleDB database
+  - create bucket
+  
+- walk mounts (directories)
+	- each directory
+		- walk directory
+			- each file: 	if not exists, upload, add to DB
+							if exists, check timestamps and size, if newer update
+							skip if symlink
+
+							
+- restore
+	- walk database
+		- if file not exists in target directory, download file to target directory
